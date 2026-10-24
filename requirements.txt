@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+numpy
+pandas
+scipy
+supabase
+python-dotenv
+psycopg2-binary
+rasterio

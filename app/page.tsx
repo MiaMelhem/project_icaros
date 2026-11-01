@@ -129,7 +129,7 @@ export default function Home() {
   const [routeValidation, setRouteValidation] = useState<RouteValidationResult | null>(null);
   const [pickMode, setPickMode] = useState<PickMode>("start");
   const [loading, setLoading] = useState(false);
-  const [previewLoading, setPreviewLoading] = useState(false);
+  const [previewLoading, setPreviewLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [saveMessage, setSaveMessage] = useState<string | null>(null);
   const [moonbase, setMoonbase] = useState<MoonbaseSettings>(DEFAULT_MOONBASE);
@@ -196,7 +196,12 @@ export default function Home() {
           setActiveRoverConfig({ ...initial });
         }
       })
-      .catch((err) => setError(`Failed to load rovers: ${err.message}`));
+      .catch((err) => {
+  const message = "Unable to initialize mission parameters. Please refresh and try again.";
+  setError(message);
+  setPreviewError(message);
+  setPreviewLoading(false);
+});
 
     fetchMoonbase()
       .then(setMoonbaseCatalog)

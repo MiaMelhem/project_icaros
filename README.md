@@ -1,4 +1,4 @@
-# ICAROS: Intelligent Crater-Aware Route Optimization System
+# ICAROS: Intelligent Crater-Aware Route Optimization System 
 
 ICAROS is a lunar rover route-planning application. It generates synthetic lunar South Pole terrain, calculates terrain hazards, and finds optimized routes between two points for different rover configurations.
 

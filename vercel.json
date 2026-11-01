@@ -1,6 +1,7 @@
 {
   "rewrites": [
     { "source": "/api/rovers", "destination": "/api/main" },
+    { "source": "/api/moonbase", "destination": "/api/main" },
     { "source": "/api/plan-route", "destination": "/api/main" },
     { "source": "/api/save-run", "destination": "/api/main" },
     { "source": "/api/lunar-sites", "destination": "/api/main" },

@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   async rewrites() {
+    // Use the local FastAPI backend only during development.
+    if (process.env.NODE_ENV === "production") {
+      return [];
+    }
+
     return [
       {
         source: "/api/rovers",

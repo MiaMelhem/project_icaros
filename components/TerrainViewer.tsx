@@ -610,9 +610,8 @@ export default function TerrainViewer({
                   <p className="terrain-empty-error">{previewError}</p>
                 ) : (
                   <p className="terrain-empty-hint">
-                    Start the backend:{" "}
-                    <code>uvicorn api.main:app --reload --port 8000</code>
-                  </p>
+  Preparing terrain visualization...
+</p>
                 )}
               </div>
             )}
